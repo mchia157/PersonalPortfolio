@@ -15,7 +15,6 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #121212 !important;
   color: #fff !important;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
 }
@@ -36,16 +35,27 @@ nav.navbar {
   top: 0;
   z-index: 9999;
   transition: 0.32 ease-in-out;
+  background: linear-gradient(to right, rgb(107, 6, 57) 5%, rgb(59, 2, 59) 80%)
 }
 
-nav.navbar.scrolled {
+/* nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
-}
+} */
 
 nav.navbar a.navbar-brand {
   width: 9%;
 }
+
+.custom-toggle {
+  border: 2px solid white !important;
+  box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
@@ -69,6 +79,7 @@ span.navbar-text {
 .social-icon {
   display: inline-block;
   margin-left: 14px;
+  margin-right: 20px;
 }
 
 .social-icon a {
@@ -148,16 +159,23 @@ span.navbar-text {
   position: absolute;
 }
 
+.vvd.reduced-padding {
+  padding: 10px;
+  
+}
+
 /*Banner CSS*/
 .my-picture {
   width: 75%;
   height: auto;
+  max-width: 300px;
 }
 
 .banner {
   margin-top: 0;
   padding: 150px 0 100px 0;
-  background: linear-gradient(to right, rgb(153, 20, 87) 5%, rgb(82, 7, 82) 80%)
+  /* background: linear-gradient(to right, rgb(153, 20, 87) 5%, rgb(82, 7, 82) 80%) */
+  background: linear-gradient(to right, rgb(107, 6, 57) 5%, rgb(59, 2, 59) 80%)
 }
 
 .banner .tagline {
@@ -200,13 +218,13 @@ span.navbar-text {
 
 .banner button svg {
   font-size: 25px;
-  margin-left: 10px;
+  margin-left: 20px;
   transition: 0.3s ease-in-out;
   line-height: 1;
 }
 
 .banner button:hover svg {
-  margin-left: 25px;
+  margin-top: 10px;
 }
 
 .banner img {
@@ -233,30 +251,275 @@ span.navbar-text {
 .item img {
   width: 80px;
   height: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .skill {
   padding: 0 0 50px 0;
-  position: relative
+  position: relative;
+  /* background: linear-gradient(to right, rgb(107, 6, 57) 5%, rgb(59, 2, 59) 80%) */
+  /* background: linear-gradient(to right, rgb(136, 0, 85) 5%, rgb(59, 2, 59) 80%); */
+  background: linear-gradient(to right, rgb(85, 0, 51) 5%, rgb(59, 2, 59) 80%)
 }
 
 .skill-bx {
-  background: rgb(92, 92, 92);
+  background: rgb(212, 156, 182);
   border-radius: 64px;
   text-align: center;
   padding: 60px 50px;
+  margin-top: -30px;
+}
+
+.skill h2{
+  font-size: 45px;
+  font-weight: 700;
   margin-top: 30px;
+  text-align: center;
+  color: rgb(65, 4, 34);
 }
 
 .skill h4 {
-  color: #B8B8B8;
-  font-size: 45px;
+  color:  rgb(65, 4, 34);
+  font-size: 32px;
   letter-spacing: 0.8;
 }
 
 .skill h5 {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(65, 4, 34);
+}
+
+/*Projects*/
+.project {
+  padding: 80px 0;
+  position: relative;
+  /* background-color: black; */
+  /* background: linear-gradient(to right, rgb(85, 0, 51) 5%, rgb(59, 2, 59) 80%) */
+  /* background: linear-gradient(to right, rgb(107, 6, 57) 5%, rgb(59, 2, 59) 80%)  */
+  background: linear-gradient(to right, rgb(107, 6, 57) 5%, rgb(59, 2, 59) 80%);
+}
+
+.project h2{
   font-size: 45px;
   font-weight: 700;
+  text-align: center;
+}
+
+.project p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+}
+
+.project .nav.nav-pills {
+  width: 72%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: rgb(255 255 255 / 10%);
+  overflow: hidden;
+}
+
+.project .nav.nav-pills .nav-item {
+  width: 33.33333%;
+}
+
+.project .nav.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: #fff;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+
+.project .nav.nav.nav-pills .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, rgb(189, 39, 114) 5%, rgb(189, 48, 189) 90%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.4s ease-in-out;
+}
+
+.project .nav.nav-pills .nav-link.active::before {
+  width: 100% !important;
+}
+
+.project .nav.nav-pills .nav-link.active {
+  border: 1px solid rgba(255,255,255,1);
+}
+
+.nav-link#projects-tabs-tab-first {
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 55px 0px 0px 55px;
+}
+
+.nav-link#projects-tabs-tab-second {
+  border-top: 1px solid rgba(255,255,255,0.5);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+
+.nav-link#projects-tabs-tab-third {
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 0px 55px 55px 0px;
+}
+
+.proj-imgbx {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  /* width: 500px; */
+}
+
+.proj-imgbx::before {
+  content: "";
+  background: linear-gradient(to right, rgb(189, 39, 114) 5%, rgb(189, 48, 189) 90%);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.proj-imgbx:hover::before {
+  height: 100%;
+}
+
+.proj-txtx {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+
+.proj-imgbx:hover .proj-txtx {
+  top: 50%;
+  opacity: 1;
+}
+
+.project a {
+  text-decoration: none;
+  color: white;
+}
+
+/*Project Title*/
+.prj-txtx h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+
+.proj-txtx span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+
+/*Contact Us*/
+.contact {
+  padding: 60px;
+  background: linear-gradient(to right, rgb(85, 0, 51) 5%, rgb(59, 2, 59) 80%);
+  /* background: #000000; */
+}
+
+.contact-bx {
+  background: rgb(212, 156, 182);
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -30px;
+}
+
+.contact input, textarea{
+  background: transparent;
+  border-radius: 10px;
+  border: 1px solid rgb(65, 4, 34);
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  color: rgb(65, 4, 34);
+  letter-spacing: 0.8px;
+}
+
+.contact textarea {
+  height: 90%;  
+}
+
+.contact input::placeholder, textarea::placeholder {
+  color: rgb(65, 4, 34);
+  font-weight: 400;
+  letter-spacing: 0.8px;
+}
+
+.contact h2{
+  margin-bottom: 40px;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(65, 4, 34);
+}
+
+.contact button {
+  padding: 10px 20px 10px 20px;
+  letter-spacing: 0.8px;
+  margin-top: 10px;
+  margin-right: 0;
+  color: rgb(65, 4, 34);
+  border: 1px solid rgb(65, 4, 34);
+}
+
+.contact img {
+  width: 75%;
+  height: auto;
+  animation: updown 5s linear infinite;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/*Footer*/
+.footer {
+  background: linear-gradient(to right, rgb(107, 6, 57) 5%, rgb(59, 2, 59) 80%)
+}
+
+.footer p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #B8B8B8;
+  letter-spacing: 0.8px;
+  margin-top: 20px;
+  
 }
 
 

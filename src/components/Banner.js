@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react"
 import { Container, Row, Col} from "react-bootstrap"
-import { ArrowRightCircle } from "react-bootstrap-icons"
+import { ArrowDownCircle } from "react-bootstrap-icons"
 import headerImg from '../images/WelcomePage/me.jpeg'
+import resume from "../documents/Resume.pdf"
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
@@ -47,13 +48,18 @@ export const Banner = () => {
                 <Row className="align-items-center">
                     <Col xs={12} md={6} xl={7}>
                         <span className="tagline">Welcome to my Portfolio</span>
-                        <h1>Hi! I am Pilar Chia. I am a <br></br>
+                        <h1>My name is Pilar Chia. I am a <br></br>
                         <div className="txt-rotate">
                             <span className="wrap">{text}</span>
                         </div>
-                        <br></br>student.</h1>
-                        <p>This is my personal website, where I'll show you more about me.</p>
-                        <button onClick={() => console.log('connect')}>Let's connect<ArrowRightCircle size={25}/></button>
+                        student.</h1>
+                        <p>
+                        I am a student at the University of North Carolina at Chapel Hill, currently seeking internship opportunities in software development and related fields. My goal is to apply my skills and further develop my expertise by designing and implementing impactful digital solutions.</p>
+                        <a href={resume} download>
+                            <button className="vvd">
+                                <span>Download My Resume<ArrowDownCircle/></span>
+                            </button>
+                        </a>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img className="my-picture" src={headerImg} alt="Header Img"></img>
