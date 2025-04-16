@@ -54,7 +54,7 @@ export const Banner = () => {
                         </div>
                         student.</h1>
                         <p>
-                        I am a student at the University of North Carolina at Chapel Hill, currently seeking internship opportunities in software development and related fields. My goal is to apply my skills and further develop my expertise by designing and implementing impactful digital solutions.</p>
+                        Motivated Computer Science and Communication and Media Studies student, passionate about building efficient digital solutions. I have hands-on experience developing and testing software using Java, Python, JavaScript, and TypeScript, with frameworks like React, Angular, and FASTAPI. I love working across the stack, from designing responsive web interfaces with HTML/CSS to building RESTful APIs and writing clean, testable code using tools like JUnit and Pytest. I am always eager to collaborate and learn new technologies.</p>
                         <a href={resume} download>
                             <button className="vvd">
                                 <span>Download My Resume<ArrowDownCircle/></span>

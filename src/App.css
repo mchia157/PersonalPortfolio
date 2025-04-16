@@ -437,65 +437,6 @@ span.navbar-text {
   letter-spacing: 0.8px;
 }
 
-/*Contact Us*/
-.contact {
-  padding: 60px;
-  background: linear-gradient(to right, rgb(85, 0, 51) 5%, rgb(59, 2, 59) 80%);
-  /* background: #000000; */
-}
-
-.contact-bx {
-  background: rgb(212, 156, 182);
-  border-radius: 64px;
-  text-align: center;
-  padding: 60px 50px;
-  margin-top: -30px;
-}
-
-.contact input, textarea{
-  background: transparent;
-  border-radius: 10px;
-  border: 1px solid rgb(65, 4, 34);
-  padding: 10px;
-  margin-bottom: 15px;
-  width: 100%;
-  color: rgb(65, 4, 34);
-  letter-spacing: 0.8px;
-}
-
-.contact textarea {
-  height: 90%;  
-}
-
-.contact input::placeholder, textarea::placeholder {
-  color: rgb(65, 4, 34);
-  font-weight: 400;
-  letter-spacing: 0.8px;
-}
-
-.contact h2{
-  margin-bottom: 40px;
-  font-size: 45px;
-  font-weight: 700;
-  text-align: center;
-  color: rgb(65, 4, 34);
-}
-
-.contact button {
-  padding: 10px 20px 10px 20px;
-  letter-spacing: 0.8px;
-  margin-top: 10px;
-  margin-right: 0;
-  color: rgb(65, 4, 34);
-  border: 1px solid rgb(65, 4, 34);
-}
-
-.contact img {
-  width: 75%;
-  height: auto;
-  animation: updown 5s linear infinite;
-}
-
 @keyframes updown {
   0% {
     transform: translateY(-20px);

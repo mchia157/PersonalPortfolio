@@ -7,7 +7,6 @@ import navIcon2 from '../images/SocialMedia-Resized/github.png'
 
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
-    // const [scrolled, setScrolled] = useState(false);
     const [expanded, setExpanded] = useState(false);
 
     const onUpdateActiveLink = (value) => {
@@ -40,7 +39,7 @@ export const NavBar = () => {
                             <a href="https://www.linkedin.com/in/pilarchia" rel="noreferrer" target="_blank"><img src={navIcon1} alt="Linkedin Logo"></img></a>
                             <a href="https://github.com/mchia157" rel="noreferrer" target="_blank"><img src={navIcon2} alt="Github Logo"></img></a>
                         </div>    
-                        <button className={`vvd ms-auto ${expanded ? 'reduced-padding' : ''}`} onClick={() => window.location.href = '#connect'}><span>Let's connect</span></button>
+                        {/* <button className={`vvd ms-auto ${expanded ? 'reduced-padding' : ''}`} onClick={() => window.location.href = '#connect'}><span>Let's connect</span></button> */}
                     </span>
                 </Navbar.Collapse>
             </Container>
