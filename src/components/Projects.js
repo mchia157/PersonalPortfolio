@@ -2,22 +2,26 @@ import {Container, Row, Col, Tab, Nav} from 'react-bootstrap'
 import {ProjectCard} from "./ProjectCard"
 import SproutScript from "../images/ProjectsImages-resized/SproutScript.jpg"
 import Checkout from "../images/ProjectsImages-resized/Checkout.jpg"
+import API from "../images/ProjectsImages-resized/api.png"
+import frontend from "../images/ProjectsImages-resized/apiFrontend.png"
 
 export const Projects = () => {
     const apiProjects = [
         {
             title: "API Design and Development (Python, FASTAPI, Pytest)",
             description: "Engineered an API for text storage and URL shortening.",
-            imgUrl: SproutScript,
-            link: "https://ex01-comp590-140-25sp-pchiaq.apps.unc.edu/docs",
-        },
-        {
-            title: "Frontend Design (Angular and TypeScript)",
-            description: "Built a front-end for API interaction.",
-            imgUrl: SproutScript,
+            imgUrl: API,
             link: "https://ex01-comp590-140-25sp-pchiaq.apps.unc.edu/docs",
         },
     ];
+    const frontendProjects = [
+        {
+            title: "Frontend Design (Angular and TypeScript)",
+            description: "Built a front-end for API interaction.",
+            imgUrl: frontend,
+            link: "https://ex01-comp590-140-25sp-pchiaq.apps.unc.edu/docs",
+        },
+    ]
 
     const gameProjects = [
         {
@@ -42,13 +46,13 @@ export const Projects = () => {
                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                             <Nav.Item>
-                                <Nav.Link eventKey="first">API & Frontend</Nav.Link>
+                                <Nav.Link eventKey="first">RESTful APIs</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="second">Java MVC Game</Nav.Link>
+                                <Nav.Link eventKey="second">Frontend Development</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="third">Other Games</Nav.Link>
+                                <Nav.Link eventKey="third">Games</Nav.Link>
                             </Nav.Item>
                         </Nav>
                         <Tab.Content>
@@ -63,6 +67,20 @@ export const Projects = () => {
                                                 />
                                             )
                                         })
+                                    }
+                                </Row>
+                            </Tab.Pane>
+                            <Tab.Pane eventKey="second">
+                                <Row className="justify-content-center">
+                                    {
+                                        frontendProjects.map((project, index) => {
+                                            return (
+                                                <ProjectCard
+                                                key={index}
+                                                {...project}
+                                                />
+                                            )
+                                        }) 
                                     }
                                 </Row>
                             </Tab.Pane>
